@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: #eee;
+}
+
+.navbar {
+  position: fixed; /* Barra de navegação fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+}
+
+.navbar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar nav ul li {
+  margin: 0 15px;
+}
+
+.navbar nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+  color: #ffd700; /* Cor dourada para o item ativo/hover */
+}
+
+.content-sections {
+  padding-top: 60px; /* Espaço para a barra de navegação fixa */
+}
+
+.content-section {
+  display: none; /* Todas as seções escondidas por padrão */
+  padding: 20px;
+  min-height: calc(
+    100vh - 60px
+  ); /* Garante que a seção ocupe a altura restante da tela */
+  box-sizing: border-box; /* Inclui padding na altura total */
+  text-align: center;
+  background-color: #333; /* Cor de fundo para as seções */
+  border-bottom: 1px solid #444;
+}
+
+.content-section.active {
+  display: block; /* A seção ativa é exibida */
+}
+
+.content-section h1 {
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+#homeImage {
+  height: 650px;
+  width: 650px;
+
+  border: 2px solid #555;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.content-section img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #555;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para a seção de seleção de personagem (reutilizando do exemplo anterior) */
+#character-select {
+  background-color: #000;
+}
+
+#character-select h1 {
+  color: #ffd700;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.character-item {
+  width: 100px;
+  height: 100px;
+  background-color: #222;
+  border: 2px solid #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.character-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.character-item.selected {
+  border-color: #00f;
+  transform: scale(1.05);
+}
+
+.selected-character-display {
+  width: 250px;
+  height: 350px;
+  background-color: #111;
+  border: 2px solid #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Centraliza o display do personagem selecionado */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.selected-character-display img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border: 2px solid #ffd700;
+}
+
+.selected-character-display h2 {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#game-title-1 {
+  color: brown;
+}
+
+#game-title-2 {
+  color: gold;
+}
+
+#news-list {
+  list-style: none;
+  padding: 0;
+}
+
+#news-list li {
+  background-color: #222;
+  border: 1px solid #555;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
